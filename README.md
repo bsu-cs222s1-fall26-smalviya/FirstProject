@@ -1,16 +1,20 @@
 FirstProject
 
-This program shows the recent changes made to a wikipedia article.
+This program shows the recent changes made to a Wikipedia article.
 
 Authors
 
-Hawa Umutoniwase
+Hawa Umutoniwase  
 ABDULLAH AL MUSA BHUIYAN
 
-How to Run
+How to run
 
-1. Open the project in IntelliJ IDEA.
-2. Let gradle load the project.
-3. Run Main.java.
-4. Enter the name of a wikipedia article.
-5. The program will show the recent changes.
+Open the project in IntelliJ and let Gradle load.
+
+For the command line version:
+Gradle → Tasks → application → run
+
+For the GUI version:
+Gradle → Tasks → application → runGui
+
+Enter a Wikipedia article name to see its recent changes.
