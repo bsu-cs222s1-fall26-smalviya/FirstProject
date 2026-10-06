@@ -34,8 +34,11 @@ public class WikipediaGui extends Application {
 
         resultsArea = new TextArea();
         resultsArea.setEditable(false);
+        resultsArea.setWrapText(true);
+        resultsArea.setPrefHeight(400);
 
         searchButton.setOnAction(event -> search());
+        articleField.setOnAction(event -> search());
 
         VBox layout = new VBox(
                 10,
