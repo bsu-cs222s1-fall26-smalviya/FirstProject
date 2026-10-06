@@ -39,4 +39,9 @@ tasks.register<JavaExec>("runGui") {
     description = "Runs the JavaFX GUI"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("edu.bsu.cs.WikipediaGui")
+    jvmArgs = listOf(
+        "--module-path", configurations["runtimeClasspath"]
+            .asPath,
+        "--add-modules", "javafx.controls,javafx.fxml"
+    )
 }
