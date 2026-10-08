@@ -105,29 +105,9 @@ public class WikipediaGui extends Application {
 
     private void displayResult(WikipediaResult result) {
 
-        if (result.isMissing()) {
-            resultsArea.setText(
-                    "No Wikipedia page found.");
-            return;
-        }
+        RevisionFormatter formatter = new RevisionFormatter();
 
-        StringBuilder output = new StringBuilder();
-
-        if (result.isRedirect()) {
-            output.append("Redirected.\n\n");
-        }
-
-        output.append("Recent changes:\n\n");
-
-        for (Revision revision : result.getRevisions()) {
-            output.append("Username: ")
-                    .append(revision.getUsername())
-                    .append(" | Timestamp: ")
-                    .append(revision.getTimestamp())
-                    .append("\n");
-        }
-
-        resultsArea.setText(output.toString());
+        resultsArea.setText(formatter.format(result));
     }
 
     private void setControlsDisabled(boolean disabled) {
